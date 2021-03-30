@@ -17,29 +17,29 @@ btnAddCard.addEventListener("click", () => {
     // 3. crear dentro de card un div con clase front y un div de back.
     // 4. front = name y back = description.
 
-    if(name != "" && description != "") {
+    if (name != "" && description != "") {
         const divContainer = document.createElement("div");
         divContainer.classList.add("container");
-    
+
         const divCard = document.createElement("div");
         divCard.classList.add("card");
-    
+
         divContainer.appendChild(divCard);
-    
+
         const divFront = document.createElement("div");
         divFront.classList.add("front");
-    
+
         const divBack = document.createElement("div");
         divBack.classList.add("back");
-    
+
         divFront.innerHTML = name;
         divBack.innerHTML = description;
-    
+
         divCard.appendChild(divFront);
         divCard.appendChild(divBack);
-    
+
         main.appendChild(divContainer);
-    
+
         nameInput.value = "";
         descriptionInput.value = "";
 
@@ -50,3 +50,8 @@ btnAddCard.addEventListener("click", () => {
     }
 
 });
+
+btnAddCard.addEventListener('keypress', (e) => {
+    if (e.key == "Enter") addTask();
+});
+
