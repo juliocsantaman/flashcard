@@ -13,10 +13,10 @@ function addCard() {
     const description = descriptionInput.value;
     const main = document.querySelector("main");
 
-    // 1. Crear div con clase container.
-    // 2. crear dentro de container un div con clase card.
-    // 3. crear dentro de card un div con clase front y un div de back.
-    // 4. front = name y back = description.
+    // 1. Create div with class container.
+    // 2. Create in div container a div with class card.
+    // 3. Create in div card a div with class front and other div with class back.
+    // 4. front = name and back = description.
 
     if (name != "" && description != "") {
         const divContainer = document.createElement("div");
@@ -51,9 +51,4 @@ function addCard() {
     }
 }
 
-btnAddCard.addEventListener("click", addCard)
-
-btnAddCard.addEventListener('keypress', (e) => {
-    if (e.key == "Enter") addCard();
-});
-
+btnAddCard.addEventListener("click", addCard);
