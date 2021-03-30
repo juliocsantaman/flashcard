@@ -7,7 +7,8 @@ const btnAddCard = document.getElementById("btn-add-card");
 // console.log(descriptionInput);
 // console.log(btnAddCard);
 
-btnAddCard.addEventListener("click", () => {
+
+function addCard() {
     const name = nameInput.value;
     const description = descriptionInput.value;
     const main = document.querySelector("main");
@@ -48,10 +49,11 @@ btnAddCard.addEventListener("click", () => {
     } else {
         alert("No puedes dejar los campos en blanco.");
     }
+}
 
-});
+btnAddCard.addEventListener("click", addCard)
 
 btnAddCard.addEventListener('keypress', (e) => {
-    if (e.key == "Enter") addTask();
+    if (e.key == "Enter") addCard();
 });
 
